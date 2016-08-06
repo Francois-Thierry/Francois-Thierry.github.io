@@ -710,7 +710,7 @@ Project content panel
 .cd-project-content > div {
   height: 100%;
   overflow-y: auto;
-  padding: 4em 2em;
+  padding: 0 2em;
 }
 .cd-project-content > div > * {
   max-width: 800px;
@@ -743,10 +743,11 @@ Project content panel
   display: block;
   font-size: 1.8rem;
   font-style: italic;
-  margin: 1em auto;
+  margin: 0 auto;
+  margin-top: 1em;
 }
 .cd-project-content p {
-  margin-bottom: 1em;
+  margin: 0 auto;
   font-size: 1.4rem;
   color: #6f757c;
 }

@@ -45,7 +45,7 @@ jQuery(document).ready(function(){
 	// });
 
 	//select a single project - open project-content panel
-	projectsContainer.on('click', '.cd-slider a', function(event) {
+	$("#news").on('click', function(event) {
 		var mq = checkMQ();
 		event.preventDefault();
 		if( $(this).parent('li').next('li').is('.current') && (mq == 'desktop') ) {
