@@ -5,169 +5,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>François Thierry on Github</title>
 
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/repositories-overview.css">
+  <script src="external/jquery-3.1.0.min.js"></script>
+
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="repositories-overview.css">
 
 </head>
 <body>
 
-<!-- <div id="wrapper">
-  <div id="mask"> -->
+<!--                                                               Main HTML -->
+<!-- ----------------------------------------------------------------------- -->
 
-<!--   <div id="repositories-overview" class="external-html active" style="visibility:visible;">
-    <object type="text/html" data="html/repositories-overview.html" style="width:100%; height:100%;"></object>
-  </div> -->
+<div class="wrapper">
+  <div class="header"></div>
+  <div class="row">
+    <div class="column-12">
+      <p style="margin-bottom:0.5em;">Hello my name is</p>
+      <a id="about-link" href="https://francois-thierry.github.io/about-me/"><h1 style="margin-top:0;">François Thierry</h1></a>
+      <p>You stumbled upon my code repository on github a.k.a my personal website. Click on my name if you wish to know more about me. Below you will find links to the webpage of various projects. All the code and data necessary for those projects are freely available on github. You can also consult the <a id="news">news feed</a> to see which major improvements have been made. For convenience, the projects are sorted by time of last major improvement.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column-12 repositories">
 
-<!--   <div id="about-me" class="external-html" style="visibility:visible;">
-    <object type="text/html" data="html/about-me.html" style="width:100%; height:100%;"></object>
-    <a id="close-link" href="#repositories-overview" class="cd-close cd-img-replace"></a>
-  </div> -->
+      <a href="https://francois-thierry.github.io/entertainment-lists/">
+        <h2>Entertainment lists</h2>
+        <p>browse and edit the dataset of my favourite films, series and books</p>
+      </a>
+<br>
+      <a href="https://francois-thierry.github.io/paintings-study">
+        <h2>Paintings study</h2>
+        <p>computer vision and machine learning on a 35k paintings dataset</p>
+      </a>
+<br>
+      <a href="https://francois-thierry.github.io/about-me/">
+        <h2>About me</h2>
+        <p>responsive curriculum vitae</p>
+      </a>
+<br>
+      <a href="https://francois-thierry.github.io/material-properties/">
+        <h2>Material Properties</h2>
+        <p>dataset containing some physical properties of materials (mostly semiconductors)</p>
+      </a>
+    </div>
 
-<!--   </div>
-</div> -->
+  </div>
+  <div class="footer"></div>
+</div>
 
-<!-- -------------------------------------------------------------------------------- -->
-<!-- -- ABOUT                                                                      -- -->
-<!-- -------------------------------------------------------------------------------- -->
-
-<header id="about">
-
-  <p>Hello, my name is <br><a id="about-link" href="https://francois-thierry.github.io/about-me/"><b>François Thierry</b></a></p>
-
-  <p>You stumbled upon my code repository a.k.a my personal website. Click on my name if you wish to know more about me.</p>
-
-  <p>Below you will find more informations about some <a href="#projects-separator"><b>projects</b></a> that I have undertaken. You can also consult the <a id="news">news feed</a> to see which improvements have been made.</p>
-
-  <p style="color:red;">
-  <b>DISCLAIMER:</b><br>
-  This website is in early development stage and will change drastically in the near future.<br>
-  For now, only the Datasets repository is functional.
-  </p>
-
-  <div class="line-separator" id="projects-separator"></div>
-
-</header>
-
-<!-- -------------------------------------------------------------------------------- -->
-<!-- -- REPOSITORIES OVERVIEW                                                      -- -->
-<!-- -------------------------------------------------------------------------------- -->
+<!--                                                              News Panel -->
+<!-- ----------------------------------------------------------------------- -->
 
 <div class="container">
-<div class="cd-projects-wrapper content">
-  <ul class="cd-slider">
-    <li class="current">
-      <a href="#content1">
-        <img src="img/painting_fingerprint.png" alt="project image">
-        <div class="project-info">
-          <h2>Paintings Study</h2>
-          <p>computer vision, machine-learning</p>
-        </div>
-      </a>
-    </li>
-
-    <li>
-      <a href="https://francois-thierry.github.io/datasets/">
-        <img src="img/material_database.png" alt="project image">
-        <div class="project-info">
-          <h2>Datasets</h2>
-          <p>various</p>
-        </div>
-      </a>
-    </li>
-
-    <li>
-      <a href="#0">
-        <img src="img/tmm_incoherente_calculations.png" alt="project image">
-        <div class="project-info">
-          <h2>Optical properties of multilayers materials</h2>
-          <p>optics, material science</p>
-        </div>
-      </a>
-    </li>
-
-    <li>
-      <a href="#0">
-        <img src="img/img.png" alt="project image">
-        <div class="project-info">
-          <h2>Electronic properties of quantum nanostructures</h2>
-          <p>nanoelectronics, material science</p>
-        </div>
-      </a>
-    </li>
-
-    <li>
-      <a href="#0">
-        <img src="img/img.png" alt="project image">
-        <div class="project-info">
-          <h2>Project 5</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur.</p>
-        </div>
-      </a>
-    </li>
-
-    <li>
-      <a href="#0">
-        <img src="img/img.png" alt="project image">
-        <div class="project-info">
-          <h2>Project 6</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat.</p>
-        </div>
-      </a>
-    </li>
-
-    <li>
-      <a href="#0">
-        <img src="img/img.png" alt="project image">
-        <div class="project-info">
-          <h2>Project 7</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        </div>
-      </a>
-    </li>
-    
-    <li>
-      <a href="#0">
-        <img src="img/img.png" alt="project image">
-        <div class="project-info">
-          <h2>Project 8</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-        </div>
-      </a>
-    </li>
-
-    <li>
-      <a href="#0">
-        <img src="img/img.png" alt="project image">
-        <div class="project-info">
-          <h2>Project 9</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-        </div>
-      </a>
-    </li>
-  </ul>
-
-  <ul class="cd-slider-navigation cd-img-replace">
-    <li><a href="#0" class="prev inactive">Prev</a></li>
-    <li><a href="#0" class="next">Next</a></li>
-  </ul> <!-- .cd-slider-navigation -->
-</div> <!-- .cd-projects-wrapper -->
-
-<div class="cd-project-content">
-  <div>
-    <h2>Recent activities</h2>
-
-    <em>August 6th 2016</em>
-    <p>
-    Finally got a semi-working version of this website. Only the pages "about-me", "datasets" and "material-properties" are accessible for now, I will soon add more. There are also huge cosmetics (layouts, responsive, touch..) improvements to make.
-    </p>
+  <div class="cd-project-content">
+    <div>
+      <h2 style="">Recent activities</h2>
+      <em>October 21th 2016</em>
+      <p>
+      Huge update of the website. I added "paintings-study" and "entertainment-lists" repositories, deleted the "dataset" one. I also unified the CSS styling across the webpages, they are now completly responsive. I also made numerous clean-ups and comments in the code. 
+      </p>
+      <em>August 6th 2016</em>
+      <p>
+      Finally got a semi-working version of this website. Only the pages "about-me", "datasets" and "material-properties" are accessible for now, I will soon add more. There are also huge cosmetics (layouts, responsive, touch..) improvements to make.
+      </p>
+    </div>
+    <a href="#0" class="close cd-img-replace">x</a>
   </div>
-  <a href="#0" class="close cd-img-replace">Close</a>
-</div> <!-- .cd-project-content -->
-
 </div>
-<!-- -------------------------------------------------------------------------------- -->
-  <script src="js/jquery-2.1.4.js"></script>
-  <script src="js/jquery.mobile.custom.min.js"></script>
-  <script src="js/repositories-overview.js"></script>
+
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+
+  <script type="text/javascript">
+    var singleProjectContent = $('.cd-project-content')
+
+    // open news panel
+    $("#news").on('click', function(event) {
+      event.preventDefault();
+      singleProjectContent.addClass('is-visible');
+    });
+
+    //close news panel
+    singleProjectContent.on('click', '.close', function(event){
+      event.preventDefault();
+      singleProjectContent.removeClass('is-visible');
+    });
+  </script>
 </body>
 </html>
