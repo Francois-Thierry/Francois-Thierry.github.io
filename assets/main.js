@@ -1,12 +1,28 @@
-//                                            Common elements across the website
+//                                                            Language selection
 ////////////////////////////////////////////////////////////////////////////////
 
+console.log(getCookie("language"))
+
 // add language buttons (English language by default)
-$(".header").append("<p class='language-button selected'>ENG</p>")
+$(".header").append("<p class='language-button'>ENG</p>")
 $(".header").append("<p class='language-button'>FR</p>")
 
-// hide french
-$(".FR").css("display", "none");
+// if no language cookie exists
+if (!getCookie("language")) {
+  // stores the language cookie with default value for 1 day
+  setCookie("language", "ENG", 1);
+};
+
+// highlight button of selected language
+$(".language-button").filter(function(){
+  return this.innerHTML == getCookie("language");
+}).addClass("selected");
+
+// hide both version of the website
+  $(".FR, .ENG").css("display", "none");
+
+// display the selected language version of the website
+$("."+getCookie("language")).css("display", "inline");
 
 // select language callback
 $(".language-button").on("click", function(event) {
@@ -17,7 +33,9 @@ $(".language-button").on("click", function(event) {
   // current language button in bold
   $(this).addClass("selected");
   // display the selected language version of the website
-  $("."+this.innerHTML).css("display", "block");
+  $("."+this.innerHTML).css("display", "inline");
+  // remember the language selection
+  setCookie("language", this.innerHTML, 1);
 });
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -100,3 +118,27 @@ var downloadFile = function(json) {
     // cleanUp(this);
   };
 };
+
+// http://www.w3schools.com/js/js_cookies.asp
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length,c.length);
+        }
+    }
+    return "";
+} 
