@@ -30,7 +30,7 @@ max-height:100%;
 .wrapper {
     width: 100%;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
 }
 
 .wrapper:after,
@@ -48,9 +48,9 @@ max-height:100%;
     width: 100%;
     min-height: 1px;
     /*margin-bottom: 1em;*/
-    text-align: justify;
+    text-align: left;
     margin: 0 auto;
-    }
+}
 
 a {
     text-decoration: none;
@@ -146,7 +146,7 @@ h3 {
 .language-button {
   float: right;
   padding-top: 1em;
-  padding-left: 0.5em;
+  padding-right: 0.5em;
   font-weight: bold;
   cursor: pointer;
   color: #9e9e9e;
@@ -439,7 +439,10 @@ h3 {
   }
 }
 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-@media (min-width:481px) { 
+@media (min-width:481px) {
+  [class*='column-'] {
+    text-align: justify;
+  }
   .column-1 { width: 8.33333%; }
   .column-2 { width: 16.66667%; }   
   .column-3 { width: 25%; }   

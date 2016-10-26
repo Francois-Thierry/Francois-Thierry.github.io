@@ -4,13 +4,13 @@
 console.log(getCookie("language"))
 
 // add language buttons (English language by default)
-$(".header").append("<p class='language-button'>ENG</p>")
+$(".header").append("<p class='language-button'>EN</p>")
 $(".header").append("<p class='language-button'>FR</p>")
 
 // if no language cookie exists
 if (!getCookie("language")) {
   // stores the language cookie with default value for 1 day
-  setCookie("language", "ENG", 1);
+  setCookie("language", "EN", 1);
 };
 
 // highlight button of selected language
@@ -19,21 +19,21 @@ $(".language-button").filter(function(){
 }).addClass("selected");
 
 // hide both version of the website
-  $(".FR, .ENG").css("display", "none");
+  $(".FR, .EN").css("display", "none");
 
 // display the selected language version of the website
-$("."+getCookie("language")).css("display", "inline");
+$("."+getCookie("language")).css("display", "inline-block");
 
 // select language callback
 $(".language-button").on("click", function(event) {
   // unselect both languages
   $(".language-button").removeClass("selected");
   // hide both version of the website
-  $(".FR, .ENG").css("display", "none");
+  $(".FR, .EN").css("display", "none");
   // current language button in bold
   $(this).addClass("selected");
   // display the selected language version of the website
-  $("."+this.innerHTML).css("display", "inline");
+  $("."+this.innerHTML).css("display", "inline-block");
   // remember the language selection
   setCookie("language", this.innerHTML, 1);
 });
