@@ -1,51 +1,72 @@
-<!doctype html>
-<html lang="en" class="no-js">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>François Thierry on Github</title>
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>François Thierry on Github</title>
 
-  <link rel="stylesheet" href="assets/main.css">
-  <link rel="stylesheet" href="repositories-overview.css">
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="repositories-overview.css">
 
-  <script src="assets/external/jquery-3.1.0.min.js"></script>
+    <script src="assets/external/jquery-3.1.0.min.js"></script>
 
-</head>
+  </head>
 <body>
 
-<!-- Main HTML -->
-<!-- -->
+<!--                                                               Main HTML -->
+<!-- ----------------------------------------------------------------------- -->
 
 <div class="wrapper">
   <div class="header"></div>
   <div class="row">
-    <div class="column-12">
+    <div class="column-12 ENG">
       <p style="margin-bottom:0.5em;">Hello my name is</p>
       <a id="about-link" href="https://francois-thierry.github.io/about-me/"><h1 style="margin-top:0;">François Thierry</h1></a>
       <p>You stumbled upon my code repository on github a.k.a my personal website. Click on my name if you wish to know more about me. Below you will find links to the webpage of various projects. All the code and data necessary for those projects are freely available on github. You can also consult the <a id="news">news feed</a> to see which major improvements have been made. For convenience, the projects are sorted by time of last major improvement.</p>
+    </div>
+    <div class="column-12 FR">
+      <p style="margin-bottom:0.5em;">Bonjour mon nom est</p>
+      <a id="about-link" href="https://francois-thierry.github.io/about-me/"><h1 style="margin-top:0;">François Thierry</h1></a>
+      <p>Vous êtes arrivé sur la page de mon compte github que j'utilise comme site personnel. Cliquez sur mon nom si vous souhaitez en savoir plus sur moi. Vous trouverez ci-dessous les liens vers les pages internet de différents projets. L'intégralité du code et des données nécessaires à ces projets sont disponibles sur github. Vous pouvez aussi consulter la <a id="news">liste des améliorations majeures</a>. Les projets sont listés selon leur date de dernière avancée significative.</p>
     </div>
   </div>
   <div class="row">
     <div class="column-12 repositories">
 
-      <a href="https://francois-thierry.github.io/entertainment-lists/">
+      <a href="https://francois-thierry.github.io/entertainment-lists/" class="ENG">
         <h2>Entertainment lists</h2>
         <p>browse and edit the dataset of my favourite films, series and books</p>
       </a>
-<br>
-      <a href="https://francois-thierry.github.io/paintings-study">
-        <h2>Paintings study</h2>
-        <p>computer vision and machine learning on a 35k paintings dataset</p>
+      <a href="https://francois-thierry.github.io/entertainment-lists/" class="FR">
+        <h2>Listes de divertissement</h2>
+        <p>parcourrez et éditez la base de données de mes films, séries et livres préférés</p>
       </a>
 <br>
-      <a href="https://francois-thierry.github.io/about-me/">
+      <a href="https://francois-thierry.github.io/paintings-study" class="ENG">
+        <h2>Paintings study</h2>
+        <p>image analysis and machine learning on a 35k paintings dataset</p>
+      </a>
+      <a href="https://francois-thierry.github.io/paintings-study" class="FR">
+        <h2>Etude de tableaux</h2>
+        <p>analyse d'image et apprentissage automatique de 35k tableaux</p>
+      </a>
+<br>
+      <a href="https://francois-thierry.github.io/about-me/" class="ENG">
         <h2>About me</h2>
         <p>responsive curriculum vitae</p>
       </a>
+      <a href="https://francois-thierry.github.io/about-me/" class="FR">
+        <h2>A propos de moi</h2>
+        <p>curriculum vitae numérique</p>
+      </a>
 <br>
-      <a href="https://francois-thierry.github.io/material-properties/">
+      <a href="https://francois-thierry.github.io/material-properties/" class="ENG">
         <h2>Material Properties</h2>
         <p>dataset containing some physical properties of materials (mostly semiconductors)</p>
+      </a>
+      <a href="https://francois-thierry.github.io/material-properties/" class="FR">
+        <h2>Propriétés des matériaux</h2>
+        <p>base de données des propriétés physiques des matériaux (surtout semiconducteurs)</p>
       </a>
     </div>
 
@@ -53,8 +74,8 @@
   <div class="footer"></div>
 </div>
 
-<!--  News Panel -->
-<!--  -->
+<!--                                                              News Panel -->
+<!-- ----------------------------------------------------------------------- -->
 
 <div class="container">
   <div class="cd-project-content">
@@ -73,9 +94,10 @@
   </div>
 </div>
 
-<!--  -->
-<!--  -->
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
 
+  <script src="assets/main.js"></script>
   <script type="text/javascript">
     var singleProjectContent = $('.cd-project-content')
 

@@ -136,7 +136,32 @@ h3 {
     }
 }
 
-.header, .footer {
+/*///////////////////////////////////////////////////////////////////////////*/
+/*                                                 HEADER - Select languages */
+/*///////////////////////////////////////////////////////////////////////////*/
+
+.header {
+  min-height: 2em;
+}
+
+.language-button {
+  float: right;
+  padding-top: 1em;
+  padding-left: 0.5em;
+  font-weight: bold;
+  cursor: pointer;
+  color: #9e9e9e;
+}
+
+.language-button.selected {
+  color: #212121;
+}
+
+/*///////////////////////////////////////////////////////////////////////////*/
+/*                                                      FOOTER - Github link */
+/*///////////////////////////////////////////////////////////////////////////*/
+
+.footer {
   min-height: 2em;
 }
 

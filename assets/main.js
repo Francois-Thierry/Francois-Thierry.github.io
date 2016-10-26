@@ -1,3 +1,26 @@
+//                                            Common elements across the website
+////////////////////////////////////////////////////////////////////////////////
+
+// add language buttons (English language by default)
+$(".header").append("<p class='language-button selected'>ENG</p>")
+$(".header").append("<p class='language-button'>FR</p>")
+
+// hide french
+$(".FR").css("display", "none");
+
+// select language callback
+$(".language-button").on("click", function(event) {
+  // unselect both languages
+  $(".language-button").removeClass("selected");
+  // hide both version of the website
+  $(".FR, .ENG").css("display", "none");
+  // current language button in bold
+  $(this).addClass("selected");
+  // display the selected language version of the website
+  $("."+this.innerHTML).css("display", "block");
+});
+
+////////////////////////////////////////////////////////////////////////////////
 
 function shuffle(array) {
   // https://bost.ocks.org/mike/shuffle/
