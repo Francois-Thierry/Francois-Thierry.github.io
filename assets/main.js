@@ -1,8 +1,6 @@
 //                                                            Language selection
 ////////////////////////////////////////////////////////////////////////////////
 
-console.log(getCookie("language"))
-
 // add language buttons (English language by default)
 $(".header").append("<p class='language-button'>EN</p>")
 $(".header").append("<p class='language-button'>FR</p>")
@@ -18,14 +16,19 @@ $(".language-button").filter(function(){
   return this.innerHTML == getCookie("language");
 }).addClass("selected");
 
+// change page title
+document.title = $("title."+getCookie("language")).text();
+
 // hide both version of the website
-  $(".FR, .EN").css("display", "none");
+$(".FR, .EN").css("display", "none");
 
 // display the selected language version of the website
 $("."+getCookie("language")).css("display", "inline-block");
 
 // select language callback
 $(".language-button").on("click", function(event) {
+  // change window title
+  document.title = $("title."+this.innerHTML).text();
   // unselect both languages
   $(".language-button").removeClass("selected");
   // hide both version of the website
