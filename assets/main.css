@@ -27,10 +27,18 @@ img {
 max-height:100%;
 }
 
+sub, svg, h3, a {
+  background: transparent;
+}
+
 .wrapper {
     width: 100%;
     margin: 0 auto;
     text-align: center;
+}
+
+.row {
+  text-align: left;
 }
 
 .wrapper:after,
@@ -170,6 +178,39 @@ h3 {
 
 .footer {
   min-height: 2em;
+}
+
+/*///////////////////////////////////////////////////////////////////////////*/
+/*                                                  Animated Line Separator  */
+/*///////////////////////////////////////////////////////////////////////////*/
+
+/*https://css-tricks.com/animate-to-an-inline-style/*/
+
+.line-separator{
+  height:3px;
+  background:#323d55;
+  border-top:1px solid #c0c0c0;
+  border-bottom:1px solid #c0c0c0;
+  float: left;
+  width: 100%;
+  margin-bottom: 0.5em;
+  line-height: 0.2em;
+}
+
+@-webkit-keyframes progress-bar {
+   0% { width: 0; }
+}
+@-moz-keyframes progress-bar {
+   0% { width: 0; }
+}
+@keyframes progress-bar {
+   0% { width: 0; }
+}
+
+.progress-bar > div { 
+  -webkit-animation: progress-bar 1s;
+  -moz-animation: progress-bar 1s;
+  animation: progress-bar 1s;
 }
 
 /*///////////////////////////////////////////////////////////////////////////*/
