@@ -94,6 +94,11 @@ h3 {
   font-size: 1.1em;
 }
 
+.code {
+  padding-left: 1em;
+  font-size: 0.8em;
+}
+
 .row.plot {
     background: #fff;
     border-radius: 2px;
@@ -109,6 +114,21 @@ h3 {
     background-color: white;
     margin-bottom: 0;
     text-align: center;
+}
+
+.row.plot h3 {
+  margin: 0;
+  padding-right: 1em;
+  font-size: 1em;
+  color: #9E9E9E;
+  cursor: pointer;
+}
+
+.row.plot h3.active {
+  margin: 0;
+  padding-right: 1em;
+  font-size: 1em;
+  color: #212121;
 }
 
 .row.plot p {

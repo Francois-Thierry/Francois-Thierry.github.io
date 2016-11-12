@@ -146,22 +146,31 @@ function getCookie(cname) {
     return "";
 }
 
-getNextKey = function(key) {
-  // http://stackoverflow.com/questions/2256607/how-to-get-the-next-letter-of-the-alphabet-in-javascript
-  if (key === 'Z' || key === 'z') {
-    return String.fromCharCode(key.charCodeAt() - 25) + String.fromCharCode(key.charCodeAt() - 25); // AA or aa
-  } else {
-    var lastChar = key.slice(-1);
-    var sub = key.slice(0, -1);
-    if (lastChar === 'Z' || lastChar === 'z') {
-      // If a string of length > 1 ends in Z/z,
-      // increment the string (excluding the last Z/z) recursively,
-      // and append A/a (depending on casing) to it
-      return getNextKey(sub) + String.fromCharCode(lastChar.charCodeAt() - 25);
-    } else {
-      // (take till last char) append with (increment last char)
-      return sub + String.fromCharCode(lastChar.charCodeAt() + 1);
+// http://stackoverflow.com/questions/12462318/find-a-value-in-an-array-of-objects-in-javascript
+function search(nameKey, myArray){
+    for (var i=0; i < myArray.length; i++) {
+        if (myArray[i].name === nameKey) {
+            return myArray[i];
+        }
     }
-  }
-  return key;
-};
+}
+
+// getNextKey = function(key) {
+//   // http://stackoverflow.com/questions/2256607/how-to-get-the-next-letter-of-the-alphabet-in-javascript
+//   if (key === 'Z' || key === 'z') {
+//     return String.fromCharCode(key.charCodeAt() - 25) + String.fromCharCode(key.charCodeAt() - 25); // AA or aa
+//   } else {
+//     var lastChar = key.slice(-1);
+//     var sub = key.slice(0, -1);
+//     if (lastChar === 'Z' || lastChar === 'z') {
+//       // If a string of length > 1 ends in Z/z,
+//       // increment the string (excluding the last Z/z) recursively,
+//       // and append A/a (depending on casing) to it
+//       return getNextKey(sub) + String.fromCharCode(lastChar.charCodeAt() - 25);
+//     } else {
+//       // (take till last char) append with (increment last char)
+//       return sub + String.fromCharCode(lastChar.charCodeAt() + 1);
+//     }
+//   }
+//   return key;
+// };
