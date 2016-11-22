@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
     color: #212121;
-    background-color: #F5F5F5;
+    background-color: #FAFAFA;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
     -webkit-box-sizing: border-box;
@@ -27,8 +27,12 @@ img {
 max-height:100%;
 }
 
-sub, svg, h3, a {
+sub, svg, h2, h3, a {
   background: transparent;
+}
+
+.noscroll { 
+  overflow: hidden;
 }
 
 .wrapper {
@@ -39,6 +43,41 @@ sub, svg, h3, a {
 
 .row {
   text-align: left;
+}
+
+.row-action {
+  text-align: right;
+  background: transparent;
+}
+
+.row-action img {
+  width:32px;
+  height:32px;
+  padding: 0.2em;
+  background: transparent;
+  border: 1pt solid black;
+  border-radius: 50%;
+  cursor:pointer;
+}
+
+.caption.infos {
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.caption.infos.visible {
+    opacity: 1;
+    height: auto;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
 }
 
 .wrapper:after,
@@ -60,6 +99,10 @@ sub, svg, h3, a {
     margin: 0 auto;
 }
 
+[class*='column-'] p:last-child {
+    margin: 0 auto;
+}
+
 a {
     text-decoration: none;
     color: #212121;
@@ -73,6 +116,10 @@ p {
     font-size: 0.9em;
     line-height: 1.2;
     margin-bottom: 1.2em;
+}
+
+.caption {
+  font-size: 0.7em;
 }
 
 h1 {
@@ -144,7 +191,7 @@ h3 {
   width:40px;
   height:40px;
   border-radius:100%;
-  background:#F5F5F5;
+  background:#FAFAFA;
   border:none;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   cursor:pointer;
@@ -172,11 +219,22 @@ h3 {
 }
 
 /*///////////////////////////////////////////////////////////////////////////*/
-/*                                                 HEADER - Select languages */
+/*                                                                    HEADER */
 /*///////////////////////////////////////////////////////////////////////////*/
 
 .header {
   min-height: 2em;
+}
+
+.header-button {
+  float: left;
+  padding-top: 1.1em;
+  padding-left: 1em;
+  cursor: pointer;
+}
+
+.header-button img {
+  height: 22px;
 }
 
 .language-button {
@@ -193,11 +251,25 @@ h3 {
 }
 
 /*///////////////////////////////////////////////////////////////////////////*/
-/*                                                      FOOTER - Github link */
+/*                                                                    FOOTER */
 /*///////////////////////////////////////////////////////////////////////////*/
 
 .footer {
   min-height: 2em;
+}
+
+/*///////////////////////////////////////////////////////////////////////////*/
+/*                                                                   Details */
+/*///////////////////////////////////////////////////////////////////////////*/
+
+.details {
+  display: none;
+}
+
+.detailsSection h3 {
+  padding-top: 1em;
+  margin-bottom: 0.5em;
+  cursor: pointer;
 }
 
 /*///////////////////////////////////////////////////////////////////////////*/
@@ -207,14 +279,16 @@ h3 {
 /*https://css-tricks.com/animate-to-an-inline-style/*/
 
 .line-separator{
-  height:3px;
-  background:#323d55;
-  border-top:1px solid #c0c0c0;
-  border-bottom:1px solid #c0c0c0;
-  float: left;
+  height:1px;
+  background:#212121;
+  border-top:0.5px solid #212121;
+  border-bottom:0.5px solid #212121;
+  /*float: left;*/
   width: 100%;
-  margin-bottom: 0.5em;
-  line-height: 0.2em;
+  /*margin-bottom: 0.5em;*/
+  /*line-height: 0.2em;*/
+  /*position: absolute;*/
+  z-index: 3;
 }
 
 @-webkit-keyframes progress-bar {
@@ -463,7 +537,7 @@ h3 {
   /*padding-right: -100px;*/
 }
 .modal-dialog {
-  background: #F5F5F5;
+  background: #FAFAFA;
   border: #333333 solid 1px;
   border-radius: 5px;
   /*padding-right: 5em;*/
@@ -506,6 +580,9 @@ h3 {
   p {
     font-size: 1em;
   }
+  .caption {
+    font-size: 0.8em;
+  }
 }
 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 @media (min-width:481px) {
@@ -526,7 +603,7 @@ h3 {
   .column-12 { width: 100%; }
   .wrapper {
     width: 95%;
-    max-width: 1025px;
+    max-width: 961px;
   }
   h1 {
     font-size: 2em;
@@ -537,6 +614,9 @@ h3 {
   }
   p {
     font-size: 1.1em;
+  }
+  .caption {
+    font-size: 0.9em;
   }
   .header, .footer {
     min-height: 4em;
@@ -567,6 +647,9 @@ h3 {
   }
   p {
     font-size: 1.2em;
+  }
+  .caption {
+    font-size: 1em;
   }
 
 }

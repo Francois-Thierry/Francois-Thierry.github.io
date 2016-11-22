@@ -1,5 +1,10 @@
-//                                                            Language selection
 ////////////////////////////////////////////////////////////////////////////////
+//                                                          Header callbacks  //
+////////////////////////////////////////////////////////////////////////////////
+
+// add home and github buttons (English language by default)
+$(".header").append("<a class='header-button home' href='https://francois-thierry.github.io/'><img src='../assets/img/home.svg'></a>")
+$(".header").append("<a class='header-button github'><img src='../assets/img/mark-github.svg'></a>")
 
 // add language buttons (English language by default)
 $(".header").append("<p class='language-button'>EN</p>")
@@ -41,6 +46,53 @@ $(".language-button").on("click", function(event) {
   setCookie("language", this.innerHTML, 1);
 });
 
+////////////////////////////////////////////////////////////////////////////////
+//                                                          Row-Plot actions  //
+////////////////////////////////////////////////////////////////////////////////
+
+$(".infos-action").on("click", function(){
+  if ($(".caption.infos").hasClass("visible")) {
+    $(".caption.infos").removeClass("visible");
+    $(".caption.infos").css("visibility", "hidden");
+  } else {
+    $(".caption.infos").addClass("visible");
+    $(".caption.infos").css("visibility", "visible");
+  }
+})
+
+////////////////////////////////////////////////////////////////////////////////
+//                                                                    Details //
+////////////////////////////////////////////////////////////////////////////////
+
+// $(".detailsSection h3").on("click", function(){
+//   if ($(".detailsSection .details").hasClass("visible")) {
+//     $(".detailsSection .details").removeClass("visible");
+//     $(".detailsSection .details").css("display", "none");
+//   } else {
+//     $(".detailsSection .details").addClass("visible");
+//     $(".detailsSection .details").css("display", "block");
+//   }
+// })
+
+    $(".detailsSection h3").on('click', function () {
+      if ($('.detailsSection .details').hasClass('active')) {
+        $('.detailsSection .details').slideToggle(300);
+        $('.detailsSection .details').removeClass('active');
+      } else {
+        $('.detailsSection .details').addClass('active');
+        $('.detailsSection .details').slideToggle(500);
+      }
+      //   $('div.CV-content').slideToggle(1000);
+      //   $('html, body').animate({scrollTop:$("#CV-link").offset().top+4}, 1000);
+      //   if ($('div.CV-content').hasClass('active')) {
+      //   $('div.CV-content').removeClass('active');
+      // } else {
+      //   $('div.CV-content').addClass('active');
+      // }
+    });
+
+////////////////////////////////////////////////////////////////////////////////
+//                                                                      Misc  //
 ////////////////////////////////////////////////////////////////////////////////
 
 function shuffle(array) {
@@ -153,6 +205,45 @@ function search(nameKey, myArray){
             return myArray[i];
         }
     }
+}
+
+// Author:  Jacek Becela
+// Source:  http://gist.github.com/399624
+// License: MIT
+
+jQuery.fn.single_double_click = function(single_click_callback, double_click_callback, timeout) {
+  return this.each(function(){
+    var clicks = 0, self = this;
+    jQuery(this).click(function(event){
+      clicks++;
+      if (clicks == 1) {
+        setTimeout(function(){
+          if(clicks == 1) {
+            single_click_callback.call(self, event);
+          } else {
+            double_click_callback.call(self, event);
+          }
+          clicks = 0;
+        }, timeout || 300);
+      }
+    });
+  });
+}
+
+// http://jsfiddle.net/cpbwx5vr/1/
+function makeDoubleClick(doubleClickCallback, singleClickCallback) {
+    var clicks = 0, timeout;
+    return function() {
+        clicks++;
+        if (clicks == 1) {
+            singleClickCallback && singleClickCallback.apply(this, arguments);
+            timeout = setTimeout(function() { clicks = 0; }, 400);
+        } else {
+            timeout && clearTimeout(timeout);
+            doubleClickCallback && doubleClickCallback.apply(this, arguments);
+            clicks = 0;
+        }
+    };
 }
 
 // getNextKey = function(key) {
