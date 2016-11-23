@@ -136,9 +136,9 @@ h3 {
     background: #fff;
     border-radius: 2px;
     display: inline-block;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 1px 6px rgba(0,0,0,0.16), 0 1px 6px rgba(0,0,0,0.23);
     margin-bottom: 0.8em;
-    margin-top: 1em;
+    margin-top: 0.8em;
     width: 100%;
 }
 
@@ -237,12 +237,12 @@ h3 {
 .header-button {
   float: left;
   /*padding-top: 1.1em;*/
-  padding-right: 0.7em;
   cursor: pointer;
 }
 
 .header-button img {
   height: 18px;
+  padding-right: 11px;
 }
 
 .language-button {
@@ -595,6 +595,7 @@ h3 {
   }
   .header-button img {
     height: 19px;
+    padding-right: 13px;
   }
 }
 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
@@ -628,6 +629,9 @@ h3 {
   p {
     font-size: 1.1em;
   }
+  .row.plot {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
   .caption {
     font-size: 0.9em;
   }
@@ -651,6 +655,7 @@ h3 {
   }
   .header-button img {
     height: 21px;
+    padding-right: 15px;
   }
 }
 /* tablet, landscape iPad, lo-res laptops ands desktops */
