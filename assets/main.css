@@ -85,10 +85,6 @@ sub, svg, h1, h2, h3, a {
     margin: 0 auto;
 }
 
-[class*='column-'] p:last-child {
-    margin: 0 auto;
-}
-
 a {
     text-decoration: none;
     color: #212121;
@@ -102,6 +98,10 @@ p {
     font-size: 0.9em;
     line-height: 1.2;
     margin-bottom: 1.2em;
+}
+
+[class*='column-'] p:last-child {
+    margin: 0 auto;
 }
 
 .caption {
@@ -637,6 +637,7 @@ h3 {
   }
   .caption {
     font-size: 0.9em;
+    text-align: justify;
   }
   .header, .footer {
     min-height: 4em;
