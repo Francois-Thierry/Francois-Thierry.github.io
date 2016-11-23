@@ -27,7 +27,7 @@ img {
 max-height:100%;
 }
 
-sub, svg, h2, h3, a {
+sub, svg, h1, h2, h3, a {
   background: transparent;
 }
 
@@ -45,20 +45,6 @@ sub, svg, h2, h3, a {
   text-align: left;
 }
 
-.row-action {
-  text-align: right;
-  background: transparent;
-}
-
-.row-action img {
-  width:32px;
-  height:32px;
-  padding: 0.2em;
-  background: transparent;
-  border: 1pt solid black;
-  border-radius: 50%;
-  cursor:pointer;
-}
 
 .caption.infos {
   -webkit-transition: all 0.7s ease-out;
@@ -219,28 +205,50 @@ h3 {
 }
 
 /*///////////////////////////////////////////////////////////////////////////*/
+/*                                                            Action Buttons */
+/*///////////////////////////////////////////////////////////////////////////*/
+
+.row-action {
+  text-align: right;
+  background: transparent;
+  position: relative;
+  top: -0.5em;
+}
+
+.row-action img {
+  width: 25px;
+  height: 25px;
+  padding: 0.2em;
+  background: transparent;
+  border: 1pt solid black;
+  border-radius: 50%;
+  cursor:pointer;
+}
+
+/*///////////////////////////////////////////////////////////////////////////*/
 /*                                                                    HEADER */
 /*///////////////////////////////////////////////////////////////////////////*/
 
 .header {
-  min-height: 2em;
+  min-height: 3em;
+  padding: 1em;
 }
 
 .header-button {
   float: left;
-  padding-top: 1.1em;
-  padding-left: 1em;
+  /*padding-top: 1.1em;*/
+  padding-right: 0.7em;
   cursor: pointer;
 }
 
 .header-button img {
-  height: 22px;
+  height: 18px;
 }
 
 .language-button {
   float: right;
-  padding-top: 1em;
-  padding-right: 0.5em;
+  /*padding-top: 1em;*/
+  padding-left: 0.5em;
   font-weight: bold;
   cursor: pointer;
   color: #9e9e9e;
@@ -249,6 +257,7 @@ h3 {
 .language-button.selected {
   color: #212121;
 }
+
 
 /*///////////////////////////////////////////////////////////////////////////*/
 /*                                                                    FOOTER */
@@ -264,10 +273,11 @@ h3 {
 
 .details {
   display: none;
+  margin-bottom: 1em;
 }
 
 .detailsSection h3 {
-  padding-top: 1em;
+  padding-top: 0.5em;
   margin-bottom: 0.5em;
   cursor: pointer;
 }
@@ -583,10 +593,13 @@ h3 {
   .caption {
     font-size: 0.8em;
   }
+  .header-button img {
+    height: 19px;
+  }
 }
 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 @media (min-width:481px) {
-  [class*='column-'] {
+  [class*='column-'] p {
     text-align: justify;
   }
   .column-1 { width: 8.33333%; }
@@ -621,6 +634,9 @@ h3 {
   .header, .footer {
     min-height: 4em;
   }
+  .header-button img {
+    height: 20px;
+  }
 }
 /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 @media (min-width:641px) { 
@@ -632,6 +648,9 @@ h3 {
   }
   .header, .footer {
     min-height: 5em;
+  }
+  .header-button img {
+    height: 21px;
   }
 }
 /* tablet, landscape iPad, lo-res laptops ands desktops */
