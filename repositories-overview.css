@@ -43,8 +43,10 @@
 }
 
 .repositories hr {
+  left:0;
   height: 3px;
   background-color: #212121;
+  border-color: #212121;
 }
 
 
