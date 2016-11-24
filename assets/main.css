@@ -45,27 +45,6 @@ sub, svg, h1, h2, h3, a, b {
   text-align: left;
 }
 
-
-.caption.infos {
-  -webkit-transition: all 0.7s ease-out;
-  -moz-transition: all 0.7s ease-out;
-  -ms-transition: all 0.7s ease-out;
-  -o-transition: all 0.7s ease-out;
-  transition: all 0.7s ease-out;
-  opacity: 0;
-  height: 0;
-  overflow: hidden;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.caption.infos.visible {
-    opacity: 1;
-    height: auto;
-    padding-top: 1em;
-    padding-bottom: 0.5em;
-}
-
 .wrapper:after,
 .row:after {
       content: "";
@@ -102,10 +81,6 @@ p {
 
 [class*='column-'] p:last-child {
     margin: 0 auto;
-}
-
-.caption {
-  font-size: 0.7em;
 }
 
 h1 {
@@ -170,7 +145,7 @@ h3 {
     margin: 0;
 }
 
-.round-button{
+/*.round-button{
   float: right;
   transform: translate(-10px, 30px);
   z-index: 1;
@@ -194,7 +169,7 @@ h3 {
       transform: scale(100);
       opacity: 0;
     }
-}
+}*/
 
 .bibentry {
     float: left;
@@ -212,17 +187,47 @@ h3 {
   text-align: right;
   background: transparent;
   position: relative;
-  top: -0.5em;
+  /*top: -0.5em;*/
+  padding: 0.5em 0.75em;
+  padding-bottom: 0;
+  padding-right: 0.5em; 
 }
 
 .row-action img {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   padding: 0.2em;
+  margin-left: 0.75em;
   background: transparent;
   border: 1pt solid black;
   border-radius: 50%;
   cursor:pointer;
+}
+
+.caption {
+  font-size: 0.7em;
+}
+
+.caption.infos {
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.caption.infos.visible {
+    opacity: 1;
+    height: auto;
+    padding-top: 0.5em;
+    padding-bottom: 1.5em;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 /*///////////////////////////////////////////////////////////////////////////*/
@@ -281,7 +286,7 @@ h3 {
 }
 
 .detailsSection h3 {
-  padding-top: 0.5em;
+  /*padding-top: 0.5em;*/
   margin-bottom: 0.5em;
   cursor: pointer;
 }
