@@ -107,6 +107,44 @@ h3 {
   font-size: 0.8em;
 }
 
+/*.round-button{
+  float: right;
+  transform: translate(-10px, 30px);
+  z-index: 1;
+  width:40px;
+  height:40px;
+  border-radius:100%;
+  background:#FAFAFA;
+  border:none;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  cursor:pointer;
+  outline: none;
+  line-height: 0;
+}
+
+@keyframes ripple-animation {
+    from {
+      transform: scale(1);
+      opacity: 0.4;
+    }
+    to {
+      transform: scale(100);
+      opacity: 0;
+    }
+}*/
+
+.bibentry {
+    float: left;
+    /*font-size: 1em;*/
+    margin-bottom: -0.75em;
+    display: flex;
+    text-align: left;
+}
+
+/*///////////////////////////////////////////////////////////////////////////*/
+/*                                                                  ROW PLOT */
+/*///////////////////////////////////////////////////////////////////////////*/
+
 .row.plot {
     background: #fff;
     border-radius: 2px;
@@ -145,38 +183,14 @@ h3 {
     margin: 0;
 }
 
-/*.round-button{
-  float: right;
-  transform: translate(-10px, 30px);
-  z-index: 1;
-  width:40px;
-  height:40px;
-  border-radius:100%;
-  background:#FAFAFA;
-  border:none;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  cursor:pointer;
-  outline: none;
-  line-height: 0;
-}
-
-@keyframes ripple-animation {
-    from {
-      transform: scale(1);
-      opacity: 0.4;
-    }
-    to {
-      transform: scale(100);
-      opacity: 0;
-    }
-}*/
-
-.bibentry {
-    float: left;
-    /*font-size: 1em;*/
-    margin-bottom: -0.75em;
-    display: flex;
-    text-align: left;
+.row.plot .status {
+  position: absolute;
+  text-align: left;
+  padding-top: 9px;
+  padding-left: 0.75em;
+  font-size: 1.2em;
+  background: transparent;
+  /*width: 100%;*/
 }
 
 /*///////////////////////////////////////////////////////////////////////////*/
@@ -185,6 +199,7 @@ h3 {
 
 .row-action {
   text-align: right;
+  /*display: inline-flex;*/
   background: transparent;
   position: relative;
   /*top: -0.5em;*/
@@ -219,15 +234,16 @@ h3 {
   overflow: hidden;
   padding: 0;
   margin: 0;
+    width: 100%;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 .caption.infos.visible {
     opacity: 1;
     height: auto;
     padding-top: 0.5em;
-    padding-bottom: 1.5em;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-bottom: 0.5em;
 }
 
 /*///////////////////////////////////////////////////////////////////////////*/
